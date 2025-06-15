@@ -1,0 +1,10 @@
+header 
+ - <nav></nav>
+ <i class="fas fa-font-awesome-logo-full    "></i>
+main
+- <search></search>
+- container 
+    -card 
+footer 
+ -address
+

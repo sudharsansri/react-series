@@ -1,0 +1,13 @@
+#parcel 
+HMR=>hot module replacement
+dev build 
+local server
+file watching algorithm
+caching => faster building
+image optimization
+minification of our files 
+compress our files
+consistent hashing  
+code splitting
+differental bundling
+Tree shaking
