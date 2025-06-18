@@ -1,4 +1,6 @@
- export const Header = () => {
+import { Link } from "react-router-dom";
+
+export const Header = () => {
   return (
     <div className="header">
       <div className="logo">
@@ -9,10 +11,10 @@
       </div>
       <div className="nav">
         <ul>
-          <li>Home</li>
-          <li>About us</li>
-          <li>contact us</li>
-          <li>Blog</li>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/about">About us</Link></li>
+          <li><Link to="/contact">Contact</Link> </li>
+          <li><Link to="/about">Blog</Link></li>
         </ul>
       </div>
     </div>
