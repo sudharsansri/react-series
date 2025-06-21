@@ -1,5 +1,6 @@
-export const Content=(props)=>{
-    const {name, rating,image,reviewCount} = props.res;
+export const Content=({res,items})=>{
+    const {name, rating,image,reviewCount} = res;
+   
   
     return (
         <div className="card">

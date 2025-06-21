@@ -2,6 +2,8 @@ import { Content } from "./card";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
+
+
 const Body = () => {
   const [recipes, setRecipes] = useState([]);
   const [filterRecipes, setFilterRecipes] = useState([]);
@@ -27,7 +29,8 @@ const Body = () => {
     );
     setFilterRecipes(filterData);
   };
-
+  
+  const HigherOrderComponent = withBody(Content);
   return (
     <div className="body">
       <div className="search">
@@ -45,14 +48,27 @@ const Body = () => {
       </div>
       <button onClick={handleClick}>Top Rated</button>
       <div className="content">
-        {filterRecipes.map((res) => (
+        {filterRecipes.map((res,index) => (
           <Link key={res.id} to={"/hotel/" + res.id}>
-            <Content res={res} />
+            {index % 2 == 0 ?(<HigherOrderComponent res={res}  />) : <Content res={res}/> }
+        
           </Link>
         ))}
       </div>
     </div>
   );
+};
+
+// higher order component
+const withBody = (Component) => {
+  return (props) => {
+    return (
+      <div className="body-container">
+        <h1>promoted</h1>
+        <Component {...props} />
+      </div>
+    );
+  };
 };
 
 export default Body;
