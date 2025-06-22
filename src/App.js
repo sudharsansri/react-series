@@ -8,6 +8,7 @@ import { Hotel } from "./components/main/Hotel.js";
 import { Provider } from "react-redux"; //its like a bridge between react and redux
 import {configureStore} from "@reduxjs/toolkit"; //used to create a store
 import appStore from "./utlis/appStore.js";
+import { Cart } from "./components/main/Cart.js";
 
 const Contact = lazy(() => import("./components/main/Contact.js"));
 
@@ -30,6 +31,7 @@ const appRouter = createBrowserRouter([
       { path: "/about", element: <About /> },
       { path: "/contact", element: <Suspense fallback={<h1>loading...</h1>}><Contact /></Suspense> },
       { path: "/Hotel/:resId", element: <Hotel /> },
+      { path: "/cart", element: <Cart /> }
     ]
   }
 ]);

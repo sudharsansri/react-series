@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import {addItem} from "../../utlis/cartSlice.js";
+import React from "react";
 import { use } from "react";
 
 export const Header = () => {
@@ -19,7 +20,7 @@ export const Header = () => {
     <div className="header">
       <div className="logo">
         <img className="logo-img"
-          src="https://cdn.dummyjson.com/recipe-images/30.webp"
+          src="https://dummyjson.com/icon/emilys/128"
           alt="React Logo"
         />
         <button onClick={handleClick}>food</button>
@@ -30,6 +31,7 @@ export const Header = () => {
           <li><Link to="/about">About us</Link></li>
           <li><Link to="/contact">Contact</Link> </li>
           <li><Link to="/about">Blog</Link></li>
+          <li><Link to="/cart">Cart</Link></li>
         </ul>
       </div>
     </div>

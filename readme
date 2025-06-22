@@ -11,3 +11,11 @@ consistent hashing
 code splitting
 differental bundling
 Tree shaking
+
+
+types of testing
+1.unit testing => testing the one unit of the application
+2.integration testing => multiple components are involved talking to each other
+3.e2e testing
+
+we are gonna use react routing library it use somethings know as jest
